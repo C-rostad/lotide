@@ -1,9 +1,7 @@
 const tail = function(inputArray) {
-  const returnArray = [];
-  for (let i = 0; i < inputArray.length; i++) {
-    if (i > 0) {
-      returnArray.push(inputArray[i]);
-    }
+  let returnArray = [];
+  if (inputArray.length > 1){
+    returnArray = inputArray.slice(1);
   }
   return returnArray;
 };
