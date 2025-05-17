@@ -1,10 +1,9 @@
 const head =  function(inputArray) {
   let returnValue;
-  for (let i = 0; i < inputArray.length; i++) {
-    if (i === 0) {
-      returnValue = inputArray[i];
+    if (inputArray) {
+      returnValue = inputArray[0];
     }
-  }
+  
   console.log(returnValue);
   return returnValue;
 };
