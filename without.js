@@ -22,10 +22,15 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 const without = function(source, itemsToRemove) {
   let returnArray = [];
   for (let i = 0; i < source.length; i++) {
+    let push = true;
     for (let j = 0; j < itemsToRemove.length; j++) {
-      if (source[i] !== itemsToRemove[j] && typeof source[i] === typeof itemsToRemove[j]) {
-        returnArray.push(source[i]);
+      if (source[i] === itemsToRemove[j] || typeof source[i] !== typeof itemsToRemove[j]) {
+        push = false;
       }
+      if (push) {
+    returnArray.push(source[i]);
+    }
+    push = true;
     }
   }
   return returnArray;
