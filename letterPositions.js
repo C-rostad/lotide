@@ -1,10 +1,12 @@
 const letterPositions = function(sentence) {
   const result = {};
   for (let i = 0; i < sentence.length; i++) {
-    if (result[sentence[i]]) { //if the element is in the object
-      result[sentence[i]].push(i); // add element to array
-    } else { //create element in object with index location
-      result[sentence[i]] = [i]; //create array
+    if (sentence[i] !== " ") {
+      if (result[sentence[i]]) { //if the element is in the object
+        result[sentence[i]].push(i); // add element to array
+      } else { //create element in object with index location
+        result[sentence[i]] = [i]; //create array
+      }
     }
   }
 
