@@ -1,13 +1,11 @@
 const letterPositions = function(sentence) {
   const result = {};
   for (let i = 0; i < sentence.length; i++) {
-    console.log(sentence[i]);
     if (result[sentence[i]]) { //if the element is in the object
       result[sentence[i]].push(i); // add element to array
     } else { //create element in object with index location
       result[sentence[i]] = [i]; //create array
     }
-    console.log(result);
   }
 
   return result;
@@ -41,3 +39,7 @@ assertArraysEqual(result1["h"], [0]);
 assertArraysEqual(result1["e"], [1]);
 assertArraysEqual(result1["l"], [2, 3]);
 assertArraysEqual(result1["o"], [4]);
+
+const result2 = letterPositions("lighthouse in the house");
+assertArraysEqual(result2["l"], [0]);
+assertArraysEqual(result2["i"], [1, 11]);
