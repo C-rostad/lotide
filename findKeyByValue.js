@@ -10,14 +10,14 @@ const assertEqual = function(actual, expected) {
 const findKeyByValue = function(object, value) {
   let objectKeys = Object.keys(object);
   console.log(objectKeys);
-  let returnValue;
+
   for (const keys of objectKeys) {
     console.log(keys);
-    if (keys === value) {
-      returnValue = keys;
+    if (object[keys] === value) {
+      return keys;
     }
   }
-  return returnValue;
+
 };
 
 
@@ -40,5 +40,5 @@ const testObject = {
   emptyArray: [],
 };
 
-assertEqual(findKeyByValue(testObject, ""), undefined);
+assertEqual(findKeyByValue(testObject, ""), "emptyString");
 assertEqual(findKeyByValue(testObject, []), undefined);
