@@ -1,12 +1,12 @@
 //Implement takeUntil, Week 2
 
 const takeUntil = function(array, callback) {
-  const returnArray = [];
-  for (const element of array) {
-    if (callback(element)) {
-      return returnArray;
+  const returnArray = []; //define returnArray
+  for (const element of array) { // iterate through array
+    if (callback(element)) { //check if callback is true
+      return returnArray; //end loop if callback is true
     } else {
-      returnArray.push(element);
+      returnArray.push(element); //add element to returnArray
     }
   }
 
