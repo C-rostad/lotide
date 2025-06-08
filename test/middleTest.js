@@ -17,4 +17,10 @@ describe("#middle", () => {
   it("returns an empty array when no elements", () => {
     assert.deepEqual(middle([]), []);
   });
+  it("should not modify the original array", () => {
+    const words = ["hello", "world", "lighthouse"];
+    middle(words);
+    assert.strictEqual(words.length, 3);
+  });
+
 });
