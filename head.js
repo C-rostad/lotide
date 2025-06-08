@@ -8,6 +8,5 @@ const head =  function(inputArray) {
   return returnValue;
 };
 
-const assertEqual = require("./assertEqual");
 
 module.exports = head;
