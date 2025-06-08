@@ -27,25 +27,26 @@ const eqObjects = function (object1, object2) {
   let object2Keys = Object.keys(object2);
   let object1Values = Object.values(object1);
   let object2Values = Object.values(object2);
-    object1Keys.sort();
-    object2Keys.sort();
-    object1Values.sort();
-    object2Values.sort();
 
   //check if keys are equal length
   if (object1Keys.length !== object2Keys.length) {
     return false;
   }
+
+
   //check if keys and values are the same
   for (let i = 0; i < object1Keys.length; i++) {
-    if(Array.isArray(object1Values[i]) && Array.isArray(object2Values[i])) { //check if both object values are arrays
-      if (object1Values[i].length !== object2Values[i].length) {
+    console.log(i);
+    console.log(object1[object1Keys[1]]);
+      console.log(object1[object1Keys[i]]);
+    if(Array.isArray(object1[object1Keys[i]]) && Array.isArray(object2[object2Keys[i]])) { //check if both object values are arrays
+      if (object1Values[i].length !== object2Values.object2Keys[i].length) {
         return false
-      } else if (eqArrays(object1Values[i], object2Values[i]) === false) { // refactor into || if statement when working
+      } else if (eqArrays(object1[object1Keys[i]], object2[object2Keys[i]]) === false) { // refactor into || if statement when working
         return false
       }
 
-    } else if (Array.isArray(object1Values[i]) || Array.isArray(object2Values[i])) { // if only one of the object values are arrays, return false
+    } else if (Array.isArray(object1[object1Keys[i]]) || Array.isArray(object2[object2Keys[i]])) { // if only one of the object values are arrays, return false
       return false
     }
 
@@ -94,9 +95,9 @@ const anotherMultiColorShirtObject = {
   colors: ["red", "blue"] 
 };
 
-console.log("testbreak")
+//console.log("testbreak")
 console.log(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject)); // true
-console.log("testbreak2");
+//console.log("testbreak2");
 assertEqual(eqObjects(multiColorShirtObject, anotherMultiColorShirtObject), true);
 
 const longSleeveMultiColorShirtObject = {
@@ -107,3 +108,6 @@ const longSleeveMultiColorShirtObject = {
 console.log(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject));
 eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject);; // false
 assertEqual(eqObjects(multiColorShirtObject, longSleeveMultiColorShirtObject), false);
+
+
+module.exports = eqObjects;

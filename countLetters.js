@@ -28,3 +28,6 @@ const result2 = countLetters('Lighthouse Labs');
 assertEqual(result2['L'], 2);
 assertEqual(result2['i'], 1);
 assertEqual(result2['g'], 1);
+
+
+module.exports = countLetters;

@@ -1,5 +1,7 @@
 //Implement takeUntil, Week 2
 
+const { tail } = require(".");
+
 const takeUntil = function(array, callback) {
   const returnArray = []; //define returnArray
   for (const element of array) { // iterate through array
@@ -60,4 +62,4 @@ assertArraysEqual(results2, [ "I've", 'been', 'to', 'Hollywood' ]); //true
 assertArraysEqual(results3, []); //true
 
 
-
+module.exports = takeUntil;

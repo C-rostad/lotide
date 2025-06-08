@@ -39,3 +39,5 @@ const assertArraysEqual = function(arrayOne, arrayTwo) {
 const results2 = map([]);
 assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
 assertArraysEqual(results2, []);
+
+module.exports = map;

@@ -76,3 +76,5 @@ const testTwo = {
 };
 
 assertObjectsEqual(testone, testTwo);
+
+module.exports = assertObjectsEqual;

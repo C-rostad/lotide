@@ -38,3 +38,5 @@ const testObject = {
 
 assertEqual(findKeyByValue(testObject, ""), "emptyString");
 assertEqual(findKeyByValue(testObject, []), undefined);
+
+module.exports = findKeyByValue;

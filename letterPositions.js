@@ -45,3 +45,5 @@ assertArraysEqual(result1["o"], [4]);
 const result2 = letterPositions("lighthouse in the house");
 assertArraysEqual(result2["l"], [0]);
 assertArraysEqual(result2["i"], [1, 11]);
+
+module.exports = letterPositions;

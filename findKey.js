@@ -40,3 +40,5 @@ console.log(findKey(testObject, testCallback));
 
   
 assertEqual(findKey(testObject, testCallback), "noma");
+
+module.exports = findKey;
