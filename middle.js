@@ -7,12 +7,12 @@ const middle = function(array) {
     return returnArray;
   }
   if (array.length % 2 === 1) {
-    const middle = (array.length + 1) / 2;
-    returnArray.push(array[middle - 1]);
+    const middleIndex = (array.length + 1) / 2;
+    returnArray.push(array[middleIndex - 1]);
   } else if (array.length > 1) {
-    const middle = array.length / 2;
-    returnArray.push(array[middle - 1]);
-    returnArray.push(array[middle]);
+    const middleIndex = array.length / 2;
+    returnArray.push(array[middleIndex - 1]);
+    returnArray.push(array[middleIndex]);
   }
   return returnArray;
 };
