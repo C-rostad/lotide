@@ -26,11 +26,6 @@ This project was created and published by me as part of my learnings at Lighthou
 
 The following functions are currently implemented:
 
-
-
-  head(inputArray): returns the first element of an array
-  tail(inputArray): returns a new array with the first element removed
-  middle(inputArray): returns the middle element of an array, the middle two if there is an even number of elements
   assertArraysEqual(arrayOne, arrayTwo): console logs whether or not two arrays are equal
   assertEqual(actual, expected): console logs whether two values are equal
   assertObjectsEqual(object1, object2): console logs whether two objects are equal
@@ -40,6 +35,11 @@ The following functions are currently implemented:
   eqObjects(object1, object2): returns true if both objects have identical keys with identical values
   findKey(object, callback): returns the first key in the object that has a truthy value;
   findKeyByValue(object, value): returns the key in the object based on the input value;
-  letterPositions(sentence): returns an object with all indices for each character found in the string
+  flatten(array): takes an array of arrays and returns a new array with all values in one array;
+  head(inputArray): returns the first element of an array
+  letterPositions(sentence): returns an object with all indices for each character found in the string;
+  map(array, callback): iterates over an array and performs the callback function on each element;
+  middle(inputArray): returns the middle element of an array, the middle two if there is an even number of elements
+  tail(inputArray): returns a new array with the first element removed
   takeUntil(array, callback): populates an returns a new array with all values until the callback truty value is false
   without(arrayOne, arrayTwo): returns a new array with all values from arrayTwo removed from arrayOne
